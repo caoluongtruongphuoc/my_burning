@@ -1,0 +1,33 @@
+<div class="header-top row">
+    <div class="header-top__left">
+        <div class="header-top__left--desktop">
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('header_top_left_desktop')
+            ->toHtml()
+        ?>
+        </div>
+    </div>
+    <div class="header-top__mid">
+        <div class="header-top__mid--desktop">
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('header_top_mid_desktop')
+            ->toHtml()
+        ?>
+        </div>
+    </div>
+    <div class="header-top__right">
+        <div class="header-top__right--desktop">
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('header_top_link')
+            ->toHtml()
+        ?>
+        </div>
+    </div>
+
+</div>
