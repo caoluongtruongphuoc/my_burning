@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+      <referenceContainer name="page.wrapper">
+        <block class="Magento\Framework\View\Element\Template" name="banner.top" template="Magento_Cms::banner.phtml" before="main.content"/>
+        <referenceContainer name="content">
+         <block class="Magento\Framework\View\Element\Template" name="banner.between" template="Magento_Cms::banner_between.phtml" before="-"/>
+         <block class="Magento\Framework\View\Element\Template" name="tiles" template="Magento_Cms::home_header_content/tiles.phtml" after="banner_between"/>
+         <block class="Magento\Framework\View\Element\Template" name="banner.end" template="Magento_Cms::home_header_content/banner_end.phtml" after="tiles"/>
+         <block class="Magento\Framework\View\Element\Template" name="tiles.end" template="Magento_Cms::home_header_content/tiles_end.phtml" after="banner_end"/>
+         <block class="Magento\Framework\View\Element\Template" name="outdoor.inspiration" template="Magento_Cms::outdoor_inspiration.phtml" before="lifestyle.blog" />
+         <block class="Magento\Framework\View\Element\Template" name="lifestyle.blog" template="Magento_Cms::lifestyle_blog.phtml" before="testimonials"/>
+         <block class="Magento\Framework\View\Element\Template" name="testimonials" template="Magento_Cms::burning_log_testimonials.phtml" after="-"/>
+       </referenceContainer>
+
+     </referenceContainer>
+   </body>
+ </page>

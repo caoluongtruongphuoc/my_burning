@@ -1,0 +1,31 @@
+@import '_toolbar_extend.less';
+@import '_listing_extend.less';
+& when (@media-common =true) {
+    .category-banner {
+        .lib-css(position, relative);
+        .list-banner {
+            .lib-css(position, absolute);
+            .lib-css(color, @color-white);
+            .lib-css(bottom, 10%);
+            .lib-css(left, 3.3%);
+            h1 {
+                .lib-css(font-family, @font-family__sunvalley);
+                .lib-css(font-size, 72px);
+                .lib-css(margin-bottom, 20px);
+            }
+            p {
+                .lib-css(font-family, @font-family__roboto-regular);
+                .lib-css(max-width, 500px);
+            }
+        }
+    }
+    .page-title-wrapper {
+        h1 {
+            .lib-css(font-family, @font-family__roboto-bold);
+            .lib-css(font-size, 15px);
+            .lib-css(margin-bottom, 20px);
+        }
+    }
+
+    
+}

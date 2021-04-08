@@ -54,6 +54,21 @@
         @font-path: '@{baseDir}fonts/Lora-Regular',
         @font-style: normal
     );
+    .lib-font-face (
+        @family-name: @font-sunvalley,
+        @font-path: '@{baseDir}fonts/Sun-Valley',
+        @font-style: normal
+    );
+    .lib-font-face (
+        @family-name: @font-roboto-medium,
+        @font-path: '@{baseDir}fonts/Roboto-Medium',
+        @font-style: normal
+    );
+    .lib-font-face (
+        @family-name: @font-market-regular,
+        @font-path: '@{baseDir}fonts/Market-Regular',
+        @font-style: normal
+    );
 }
 
 //
@@ -74,5 +89,8 @@
 & when (@media-common = true) {
     .items {
         .lib-list-reset-styles();
+    }
+    body {
+        font-family: @font-family__roboto-regular;
     }
 }

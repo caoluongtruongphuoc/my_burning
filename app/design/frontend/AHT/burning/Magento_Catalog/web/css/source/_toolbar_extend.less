@@ -1,0 +1,183 @@
+& when (@media-common =true) {
+    
+
+    .filter-container~.toolbar-products {
+        .toolbar-sorter.sorter {
+            display: none;
+        }
+
+        .toolbar-amount {
+            display: none;
+        }
+    }
+
+    .toolbar-amount {
+        margin-right: 20px;
+        padding-top: 10px;
+    }
+
+    .sorter {
+        width: 170px;
+        max-height: 44px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        box-sizing: border-box;
+        display: flex;
+        font-size: 13px;
+        color: #333333;
+        font-weight: 500;
+        font-family: @font-family__roboto-medium;
+        padding-top: 0;
+        padding-left: 17px;
+
+        .sorter-options {
+            background-color: @color-white;
+            box-shadow: none;
+            font-family: @font-family__roboto-regular;
+            height: 42px;
+            border: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sorter-action {
+            display: none;
+        }
+
+        .sorter-label {
+            line-height: 43px;
+    
+            &:after {
+                content: ':\00a0'
+            }
+        }
+    }
+    
+    .toolbar-products .pages .action {
+        background: none;
+    }
+}
+
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .toolbar-amount {
+        text-align: left;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .modes {
+        display: none;
+    }
+
+    .page-layout-1column .toolbar-products {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .pages {
+            margin-right: 40%;
+        
+        }
+    }
+
+    .column.main>.toolbar.toolbar-products:first-child {
+        display: none;
+    }
+
+    .filter-options {
+        .filter-options-item {
+            border: 1px solid @color-ddd;
+            width: 160px;
+            color: @color-222;
+            min-height: 44px;
+            padding-bottom: 0;
+            position: relative;
+            font-family: @font-family__roboto-bold;
+            margin-right: 10px;
+
+            .filter-options-content {
+                box-shadow: none;
+                border-color: @color-ddd;
+                width: 160px;
+                left: -1px;
+                .item a {
+                    text-decoration: none;
+                    font-family: @font-family__roboto-regular;
+                    color: @color-333;
+                    line-height: 26px;
+                    font-size: 13px;
+                    padding-left: 20px;
+                }
+            }
+
+            &.active:before {
+                display: none;
+            }
+
+            &.active:after {
+                display: none;
+            }
+
+            .filter-options-content .item {
+                padding: 0;
+            }
+        }
+
+        .filter-options-title {
+            padding-right: 0;
+            width: 142px;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 0 0 0 18px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            text-transform: none;
+            &::after {
+                content: '\f+';
+                font-weight: 700;
+                font-size: 20px;
+                top: 7px;
+                right: 18px;
+                color: @color-999;
+            }
+        }
+
+    }
+
+    .active > .filter-options-title:after {
+        content: '\f-';
+        top: 4px;
+        right: 20px;
+    }
+    
+
+    .products.wrapper~.toolbar {
+        .limiter {
+            display: none;
+        }
+
+        .pages {
+            float: none;
+            text-align: center;
+        }
+    }
+
+    .page-layout-1column .filter.block {
+        border-top: 0;
+        max-width: 75%;
+    }
+
+    .page-layout-1column .filter-content {
+        margin-top: 0;
+    }
+
+    .page-layout-1column.page-with-filter .column.main {
+        padding-top: 0;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}

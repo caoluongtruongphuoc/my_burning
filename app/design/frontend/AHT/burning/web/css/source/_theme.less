@@ -26,6 +26,12 @@
 @font-family__roboto-bold: @font-roboto-bold, @font-family__sans-serif;
 @font-roboto-regular: "Roboto-Regular";
 @font-family__roboto-regular: @font-roboto-regular, @font-family__sans-serif;
+@font-roboto-medium: "Roboto-Medium";
+@font-family__roboto-medium: @font-roboto-medium, @font-family__sans-serif;
+@font-sunvalley: "Sun-Valley";
+@font-family__sunvalley: @font-sunvalley, @font-family__sans-serif;
+@font-market-regular: "Market-Regular";
+@font-family__market-regular: @font-market-regular, @font-family__sans-serif;
 
 @h1__font-family: @font-family__lora-regular;
 @h1__font-size: @font-size32;
@@ -173,13 +179,23 @@
 //  Messages
 //  ---------------------------------------------
 
-@message__padding: 12px @indent__base 12px @indent__m;
+@message__padding: 18px 0;
 @message__line-height: false;
-@message-icon__font-size: 24px;
-@message-icon__inner-padding-left: 45px;
-@message-icon__top: 22px;
-@message-error-icon: @icon-error;
-@message-success-icon: @icon-success;
+@message__font-family: @font-family__roboto-regular;
+@message__font-size: 15px;
+@message__border-width: 1px;
+@message__border-style: solid;
+@message-success-icon: false;
+@message-info-icon: false;
+@message-error-icon: false;
+@message-warning-icon: false;
+@message-notice-icon: false;
+@message-success__color: @color-green-message;
+@message-success__background: @color-white;
+@message-success__border-color: @color-green-message;
+@message-error__background: @color-white;
+@message-error__border-color: @color-red-message;
+@message-error__color: @color-red-message;
 
 //
 //  Loaders
@@ -223,6 +239,7 @@
 // Input text
 @input-text__font-family: @font-roboto-regular;
 @form-element-input__border: 1px solid @color-ddd;
+@input-text__focus__border: 1px solid @color-ddd;
 
 //
 //  Pager
@@ -263,7 +280,7 @@
 @dropdown-toggle-icon__content: @icon-down;
 @dropdown-toggle-icon__active__content: @icon-up;
 @dropdown-toggle-icon__font-size: 14px;
-@dropdown-list__border: 1px solid @color-ddd;
+//@dropdown-list__border: 1px solid @color-ddd;
 
 //  Split dropdown
 @dropdown-split-actions__padding: 0 @indent__xs;
@@ -277,9 +294,13 @@
 //  Breadcrumbs
 //  ---------------------------------------------
 
+@breadcrumbs-separator__symbol: '/';
 @breadcrumbs__container-margin: 0 0 15px;
-@breadcrumbs-icon__font-size: 10px;
-@breadcrumbs-icon__font-margin: 0 @indent__s;
+@breadcrumbs-icon__use: false;
+@breadcrumbs__padding: 5px;
+// @breadcrumbs-icon__font-content: @icon-next;
+// @breadcrumbs-icon__font-size: 10px;
+// @breadcrumbs-icon__font-margin: 0 @indent__s;
 
 @breadcrumbs-current__color: @color-gray-middle5;
 @breadcrumbs-link__color: @link__color;
@@ -331,6 +352,18 @@
 
 @copyright__background-color: @color-gray-middle4;
 
+//
+//  Tabs
+//  ---------------------------------------------
+
+@tab-control__border-color: @color-e4;
+@tab-control__font-size: 13px;
+@tab-control__font-family: @font-roboto-bold;
+@tab-control__font-weight: @font-weight__bold;
+@tab-control__background-color: @color-f9;
+@tab-control__color: @color-a9;
+@tab-control__active__background-color: @color-white;
+@tab-control__active__color: @color-2d;
 
 // set variables
 
@@ -348,14 +381,19 @@
 @color-green-standard: #11ab15;
 @color-green-message: #68c524;
 @color-red-validate: #ed1313;
+@color-special-price: #f20101;
 @color-f8: #f8f8f8;
 @color-a9: #a9a9a9;
+@color-e4: #e4e4e4;
+@color-222: #222;
 @color-333: #333;
 @color-777: #777;
+@color-999: #999;
 @color-a7: #a7a7a7;
 @color-f9: #f9f9f9;
 @color-2d:  #2d2d2d;
 @color-d1: #d1d1d1;
 @color-ddd: #ddd;
+@color-red-message: #ee1414;
 @size-200: 200px;
 @color-3b3e: #3b3b3e;

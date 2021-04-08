@@ -4,5 +4,66 @@
 & when (@media-common =true) {
     .example-sections-1 {
         .lib-data-tabs();
+        .switch {
+            .lib-css(text-transform, uppercase);
+        }
     }
+    .product.info.detailed {
+        .example-sections-1();
+    }
+
+    // Error text
+    input.mage-error,
+    select.mage-error,
+    textarea.mage-error {
+        .lib-css(border-color, @color-red-validate);
+    }
+
+    div.mage-error {
+        .lib-css(color, @color-red9);
+    }
+
+    // Button adjust
+    &.button-adjust {
+        .lib-button(@_button-background: @color-white,
+            @_button-color: @color-a9,
+            @_button-color-hover: @color-a9,
+            @_button-font-family: @font-roboto-bold,
+            @_button-color-active: @color-a9,
+            @_button-background-active: @color-f8,
+            @_button-border: 2px solid @color-e4,
+            @_button-background-hover: @color-white,
+            @_button-border-hover: 2px solid @color-e4,);
+
+        &.active {
+            background: @color-f8;
+        }
+
+        &:visited {
+            background: @color-f8;
+            color: @color-a9;
+            border: 2px solid @color-e4;
+        }
+    }
+
+    // input field
+    input,
+    select,
+    textarea {
+        .lib-form-element-color(
+            //@_background: @color-white,
+            @_focus-color: @color-black,
+            @_focus-border-color: @color-ddd);
+    }
+
+    .message-success {
+        .lib-message(success);
+        .lib-css(text-align, center);
+    }
+
+    .message-error {
+        .lib-message(error);
+        .lib-css(text-align, center);
+    }
+    
 }
