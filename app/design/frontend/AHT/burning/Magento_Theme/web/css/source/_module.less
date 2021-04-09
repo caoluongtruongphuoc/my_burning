@@ -27,13 +27,13 @@
 @header__background-color: false;
 @header-panel__background-color: @color-2d2d2f;
 @header-panel__text-color: @color-white;
-@header-icons-color: @color-red-cart;
+@header-icons-color: @color-black;
 @header-icons-color-hover: @color-gray20;
 @customer-welcome__z-index: @dropdown-list__z-index + 1;
 
 @addto-color: @color-gray40;
 @addto-hover-color: @primary__color;
-@minicart-icons-color: @header-icons-color;
+@minicart-icons-color: @color-red-cart;
 @minicart-icons-color-hover: @header-icons-color-hover;
 
 @price-color: @color-gray34;
@@ -46,7 +46,7 @@
 @h1__margin-bottom__desktop: @indent__xl;
 
 //  Footer
-@footer__background-color: @color-gray-light01;
+@footer__background-color: @color-white;
 @footer-links-separator-border-color: @color-gray-light4;
 @footer-links-color: @color-gray34;
 @footer-links-color-hover: @color-gray20;
@@ -91,21 +91,27 @@
 
     .page-header {
         .lib-css(background-color, @header__background-color);
-        border-bottom: 1px solid @border-color__base;
+       
         margin-bottom: @indent__base;
 
         .panel.wrapper {
             .lib-css(background-color, @header-panel__background-color);
             .lib-css(color, @header-panel__text-color);
+            .lib-css(line-height, 20px);
+            .lib-css(font-size, 14px);
+            .lib-css(font-family, @font-family-name__roboto-medium);
         }
     }
 
     .header.panel {
+        .lib-css(padding-bottom, 0);
+        .lib-css(padding-left,0);
+        .lib-vendor-prefix-display(flex);
         > .header.links {
             .lib-list-inline();
             float: right;
             font-size: 0;
-            margin-left: auto;
+            
             margin-right: @indent__base;
 
             > li {
@@ -280,14 +286,14 @@
         }
     }
 
-    .copyright {
-        .lib-css(background-color, @copyright__background-color);
-        .lib-css(color, @color-white);
-        box-sizing: border-box;
-        display: block;
-        padding: @indent__s;
-        text-align: center;
-    }
+    // .copyright {
+    //     .lib-css(background-color, @copyright__background-color);
+    //     .lib-css(color, @color-white);
+    //     box-sizing: border-box;
+    //     display: block;
+    //     padding: @indent__s;
+    //     text-align: center;
+    // }
 
     .page-header,
     .page-footer {
@@ -458,13 +464,6 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .logo {
-        margin-bottom: 13px;
-        margin-top: 4px;
-    }
-}
-
 //
 //  Mobile
 //  _____________________________________________
@@ -474,6 +473,56 @@
         padding-top: 0;
         position: relative;
     }
+
+    .page-header {
+        .header.panel {
+            padding-bottom: 8px;
+            padding-top: 8px;
+        }
+    }
+
+    //
+    .transform-translateX(@_x) {
+        -moz-transform: translateX(@_x);
+        -webkit-transform: translateX(@_x);
+        -o-transform: translateX(@_x);
+        -ms-transform: translateX(@_x);
+        transform: translateX(@_x);
+    }
+    .logo {
+        width: 150px;
+        height: 45px;
+        left: 50%;
+        .transform-translateX(-50%);
+        margin: -2px 0 10px 0;
+    }
+    
+    // icon toggle
+    .header.content {
+        .action.nav-toggle {
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-direction(column);
+            font-size: 10px;
+            
+            top: 10px;
+            text-align: center;
+            width: 44px;
+            height: 44px;
+            border: 1px solid @color-gray-darken0;
+            display: block;
+            font-family: @font-family-name__roboto-regular;
+            div {
+                line-height: 10px;
+            }
+            &::before {
+                margin-top: 2px;
+                margin-bottom: 2px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+
 }
 
 //
@@ -500,8 +549,8 @@
         }
 
         .header.panel:extend(.abs-add-clearfix-desktop all) {
-            padding-bottom: @indent__s;
-            padding-top: @indent__s;
+            padding-bottom: 8px;
+            padding-top: 8px;
         }
 
         .switcher {
@@ -600,7 +649,6 @@
             > .header.links {
                 .lib-list-inline();
                 float: right;
-                margin-left: auto;
 
                 > li {
                     margin: 0 0 0 15px;

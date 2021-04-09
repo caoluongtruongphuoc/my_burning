@@ -7,8 +7,30 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock name="header" remove="true" />
+        <referenceBlock name="authorization-link" remove="true" />
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceContainer name="footer" remove="true" />
+
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Template" name="header.top" template="Magento_Theme::header_top.phtml" before="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="header.top.links" template="Magento_Theme::header_top_links.phtml" before="top.links"/>
         </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="footer.showroom" template="Magento_Theme::footer_showroom.phtml" before="-"/>    
+            <block class="Magento\Framework\View\Element\Template" name="footer.banner" template="Magento_Theme::footer_banner.phtml" after="footer.showroom"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer.service" template="Magento_Theme::footer_service.phtml" after="footer.banner"/>
+            
+            <container name="footer.content.custom" htmlTag="div" htmlClass="footer__content-custom container">
+                <container name="row.content" htmlTag="div" htmlClass="row"/>
+            </container>
+        </referenceContainer>
+
+       <move element="form.subscribe" destination="row.content"/>
+       <referenceContainer name="row.content">
+           <block class="Magento\Framework\View\Element\Template" name="footer.all.links" template="Magento_Theme::footer_all_links.phtml" before="-"/>
+       </referenceContainer>
     </body>
 </page>

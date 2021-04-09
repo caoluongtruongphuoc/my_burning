@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div class="footer__cp-pay">
+    <div class="container">
+        <div class="row">
+            <small class="footer__cp-pay--copyright">
+                <span>© 2018 Burning Log. All rights reserved</span>
+            </small>
+            <div class="footer__cp-pay--pay">
+                <?php
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_pay_api')->toHtml();
+                ?>
+            </div>
+        </div>
+    </div>
+        
+</div>

@@ -58,15 +58,16 @@
 //  Navigation
 //  ---------------------------------------------
 
-@navigation__background: @color-gray94;
+@navigation__background: @color-white;
 @navigation-level0-item__active__color: @primary__color;
 
 @submenu-item__active__color: @navigation-level0-item__active__color;
-
+@navigation-level0-item__text-transform: uppercase;
 //  Desktop navigation
-@navigation-desktop-level0-item__line-height: 47px;
+@navigation-desktop-level0-item__line-height: auto;
 @submenu-desktop__font-weight: @font-weight__regular;
 @submenu-desktop-item__active__color: @navigation-level0-item__active__color;
+@submenu-desktop-arrow: false;
 
 //  Tabs
 @tab-control__color: @color-gray43;
@@ -109,7 +110,7 @@
 //  ---------------------------------------------
 
 @button__font-weight: @font-weight__semibold;
-
+@button__border-radius: 0;
 //  Default = secondary button
 @button__background: @color-gray-darken0;
 @button__border: 1px solid @border-color__base;
@@ -293,7 +294,7 @@
 //  Footer
 //  ---------------------------------------------
 
-@copyright__background-color: @color-gray-middle4;
+@copyright__background-color: @color-white;
 
 // new var
 @font-size32: 32px;
@@ -315,10 +316,12 @@
 @color-777: #777;
 @color-a7: #a7a7a7;
 @color-f9: #f9f9f9;
+@color-2d:  #2d2d2d;
 @color-2d2d2f:  #2d2d2f;
 @color-d1: #cc9090;
 @color-ddd: #ddd;
 @color-3b3b3e: #3b3b3e;
+@color-42: #424242;
 //form
 @form-element-input__height: 40px;
 @form-element-input-placeholder__color: @color-a9;
@@ -335,4 +338,3 @@
 @h3__font-family: @font-family__lora-regular;
 @h4__font-family: @font-family-name__roboto-bold;
 
-// layout
