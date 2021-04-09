@@ -3,7 +3,8 @@
 <page
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="../web/css/line-awesome/line-awesome.min.css" />
-        <css src="../web/css/fa.min.css" />
+        <css src="css/line-awesome/line-awesome.min.css" />
+        <css src="css/fa.min.css" />
+        <css src="css/owl.carousel.css" />
     </head>
 </page>

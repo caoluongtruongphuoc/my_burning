@@ -11,12 +11,13 @@
         <block class="Magento\Framework\View\Element\Template" name="banner.top" template="Magento_Cms::banner.phtml" before="main.content"/>
         <referenceContainer name="content">
          <block class="Magento\Framework\View\Element\Template" name="banner.between" template="Magento_Cms::banner_between.phtml" before="-"/>
-         <block class="Magento\Framework\View\Element\Template" name="tiles" template="Magento_Cms::home_header_content/tiles.phtml" after="banner_between"/>
-         <block class="Magento\Framework\View\Element\Template" name="banner.end" template="Magento_Cms::home_header_content/banner_end.phtml" after="tiles"/>
-         <block class="Magento\Framework\View\Element\Template" name="tiles.end" template="Magento_Cms::home_header_content/tiles_end.phtml" after="banner_end"/>
+         <block class="Magento\Framework\View\Element\Template" name="line" template="Magento_Cms::line.phtml" after="banner_between"/>
+         <block class="Magento\Framework\View\Element\Template" name="banner.end" template="Magento_Cms::banner_end.phtml" after="line"/>
+         <block class="Magento\Framework\View\Element\Template" name="banner.image.video" template="Magento_Cms::banner_image_video.phtml" after="banner.end"/>
+         <block class="Magento\Framework\View\Element\Template" name="list.item" template="Magento_Cms::list_item.phtml" after="banner.image.video"/>
          <block class="Magento\Framework\View\Element\Template" name="outdoor.inspiration" template="Magento_Cms::outdoor_inspiration.phtml" before="lifestyle.blog" />
          <block class="Magento\Framework\View\Element\Template" name="lifestyle.blog" template="Magento_Cms::lifestyle_blog.phtml" before="testimonials"/>
-         <block class="Magento\Framework\View\Element\Template" name="testimonials" template="Magento_Cms::burning_log_testimonials.phtml" after="-"/>
+         <block class="Magento\Framework\View\Element\Template" name="testimonials" template="Magento_Cms::testimonials.phtml" after="-"/>
        </referenceContainer>
 
      </referenceContainer>

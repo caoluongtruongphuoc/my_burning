@@ -1,0 +1,70 @@
+<div class="list-item">
+  <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('home_product_list')->toHtml(); ?>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $(".product-items").slick({
+                autoplay: true,
+                rows: 1,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button" style="display: block;"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" style="display: block;"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 380,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    }
+                ]
+            });
+        });
+    });
+</script>
