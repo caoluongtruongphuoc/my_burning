@@ -1,0 +1,22 @@
+
+<?php
+echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_all_links')->toHtml();
+echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_all_links_desktop')->toHtml();
+?>
+<script>
+require(['jquery','accordion'], function ($) {
+    // collapse links    
+    $("#footer-all-links").accordion({
+        "openedState": "active",
+        "collapsible": true,
+        "active": [0,1,2],
+        "multipleCollapsible": true,
+        "icons": {"header": "las la-plus", "activeHeader": "las la-plus icon-rotate"}
+    });
+
+    // // toggle click icon 
+    // $("#footer-all-links > .links-item > .links-item__text-big > i").click(function () {
+    //     $("#footer-all-links > .links-item > .links-item__text-big > i").toggleClass("icon-rotate");
+    // });
+});
+</script>
