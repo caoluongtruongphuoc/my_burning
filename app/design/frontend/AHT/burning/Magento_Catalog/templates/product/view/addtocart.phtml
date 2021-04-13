@@ -1,0 +1,63 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product = $block->getProduct(); ?>
+<?php $buttonTitle = __('Add to Cart'); ?>
+<?php if ($_product->isSaleable()) :?>
+<div class="box-tocart">
+    <div class="fieldset">
+        <?php if ($block->shouldRenderQuantity() && ($_product->getExtensionAttributes()->getStockItem()->getMaxSaleQty() != 1)) :?>
+        <div class="field qty">
+            <div class="control">
+            <button class="qty-minus"><i class="las la-minus"></i></button>
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       min="1"
+                       value="<?= $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                       class="input-text qty"
+                       data-validate="<?= $block->escapeHtmlAttr(json_encode($block->getQuantityValidators())) ?>"
+                       />
+            <button class="qty-plus"><i class="las la-plus"></i></button>
+            </div>
+        </div>
+        <?php endif; ?>
+        <div class="actions">
+            <button type="submit"
+                    title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
+                    class="action primary tocart indetail"
+                    id="product-addtocart-button" disabled>
+                <span><?= $block->escapeHtml($buttonTitle) ?></span>
+            </button>
+            <?= $block->getChildHtml('', true) ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>
+<script>
+    require(['jquery'], function ($) {
+        $currentQty = $('.input-text.qty').val();
+        $('.qty-minus').click(function () {
+            if($currentQty > 1) $currentQty--;
+            $('.input-text.qty').val($currentQty);
+        });
+
+        $('.qty-plus').click(function () {
+            $currentQty++;
+            $('.input-text.qty').val($currentQty);
+        });
+    });
+</script>

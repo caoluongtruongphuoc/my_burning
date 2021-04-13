@@ -13,6 +13,7 @@
     button.action.primary,
     a.action.primary {
         .lib-css(border-radius, @button__border-radius);
+        .lib-css(text-transform, uppercase);
         .lib-button(
             @_button-padding: 0 15px,
             @_button-line-height: 32px,
@@ -24,6 +25,21 @@
             @_button-font-family: @font-family-name__roboto-bold,
             @_button-border: 2px solid @color-2d2d2f,
             @_button-border-hover: 2px solid @color-2d2d2f
+        );
+    }
+    
+    button.action.primary.tocart.indetail {
+        .lib-button(
+            @_button-border-hover: none,
+            @_button-border: none,
+            @_button-padding: 0 15px,
+            @_button-line-height: 40px,
+            @_button-color: @color-white,
+            @_button-background: @color-green-default,
+            @_button-background-hover: @color-green-hover,
+            @_button-color-hover: @color-white,
+            @_button-font-family: @font-family-name__roboto-bold,
+            @_button-width: 100%
         );
     }
 
