@@ -215,8 +215,25 @@
                         }
                     }
                 }
+
             }
         }
+    }
+    // list lien quan
+    .block-title.title {
+        .block-head {
+            font-size: 24px;
+            line-height: 24px;
+            margin-top: -12px;
+            font-family: @font-family-name__lora-regular;
+            span {
+                padding: 0 10px;
+                background-color: @color-white;
+            }
+        }
+    }
+    .item.product.product-item {
+        padding: 0 30px 0 15px;
     }
 }
 
@@ -253,10 +270,12 @@
 
             // left
             .product.media {
-                width: 64.52%;            
+                width: 64.52%;  
+                margin-bottom: 0;          
             }
 
             .product.info.detailed {
+                margin-bottom: 0;
                 width: 100%;
                 div.product.data.items {
                     .lib-data-tabs(
