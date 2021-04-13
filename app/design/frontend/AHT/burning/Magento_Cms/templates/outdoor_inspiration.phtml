@@ -1,6 +1,9 @@
 <div class="outdoor-inspiration">
   <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('home_inspiration')->toHtml(); ?>
 </div>
+<div class="outdoor-inspiration-mobile">
+  <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('home_inspiration_mobile')->toHtml(); ?>
+</div>
 
 <script>
   require([
@@ -9,14 +12,12 @@
   ], function($) {
     $(document).ready(function() {
       $('.inspiration-images').slick({
-        autoplay: true,
+        //autoplay: true,
         dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 1,
-        nextArrow: '<button class="slick-next" aria-label="Next" type="button" style="display: block;"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
-        prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" style="display: block;"><class="fa fa-angle-right" aria-hidden="true"></i></button>',
         responsive: [{
             breakpoint: 1024,
             settings: {
@@ -30,7 +31,9 @@
             settings: {
                 rows: 2,
                 slidesToShow: 2,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
             }
           },
           {
@@ -38,7 +41,9 @@
             settings: {
                 rows: 2,
                 slidesToShow: 2,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
             }
           }
         ]

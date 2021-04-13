@@ -1,0 +1,365 @@
+& when (@media-common = true) {
+    .slick-slide {
+        padding: 10px;
+    }
+
+    .block-title {
+        text-align: center;
+        margin: 35px 0 20px;
+        &::before {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: @color-ddd;
+            z-index: -10;
+        }
+        strong {
+            font-family: @font-family__lora-regular;
+            //font-size: 32px;
+            line-height: 24px;
+            font-weight: 400;
+            width: fit-content;
+            background-color: @color-white;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -70%);
+            padding: 0 25px;
+        }
+    }
+
+    .slick-slider {
+        .slick-prev,
+        .slick-next {
+            border-radius: 50%;
+            border: 1px solid @color-gray52;
+            width: 42px;
+            height: 42px;
+            z-index: 1;
+            background-color: @color-white;
+
+            &::before {
+                color: @color-black;
+                font-size: 34px;
+                position: relative;
+                top: -2px;
+                left: 0;
+            }
+        }
+
+        .slick-prev {
+            left: 10px;
+            top: 115px;
+
+            &::before {
+                content: "\2039";
+            }
+        }
+
+        .slick-next {
+            right: 10px;
+            top: 115px;
+
+            &::before {
+                content: "\203A";
+            }
+        }
+        .slick-dots{
+            top: 100%;
+            bottom: 0;
+            li{
+                button:active{
+                    box-shadow: none;
+                }
+                button:before{
+                    font-size: 33px;
+                    color: #fdfdfd;
+                    text-shadow: 0 0 3px #000;
+                    border: none;
+                }
+            }
+            .slick-active{
+                button:before{
+                    color: #cccccc;
+                }
+            }
+
+        }
+    }
+    
+
+}
+
+//
+// Desktop
+//-------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .outdoor-inspiration-mobile,
+    .lifestyle-blog-mobile,
+    .testimonials-mobile {
+        display: none;
+    }
+
+    .block-title strong{
+        font-size: 32px;
+    }
+
+    .widget .block-title {
+        margin: 52px 0 20px;
+        strong {
+            font-size: 32px;
+        }
+
+    }
+
+    .list-item {
+        .block-content {
+            margin-top: -55px;
+            margin-left: 8px;
+        }
+        .list-1 {
+            margin-top: 56px;
+        }
+        .list-2 {
+            margin-top: -15px;
+        }
+    }
+
+    .slick-slide{
+        margin-top: 22px;
+        .product-item .product-item-details {
+            margin-top: -18px;
+        }
+    }
+    
+
+    .outdoor-inspiration {
+        margin-top: 40px;
+        .inspiration-images {
+            margin: -30px -10px 0 -10px;
+        }
+        .block-title {
+            p {
+                margin-top: 24px;
+                font-size: 13px;
+                line-height: 20px;
+                color: @color-333;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .standard-button {
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+    }
+    
+    .testimonials {
+        margin-top: 56px;
+        .block-container {
+            margin: 30px -10px 0 -10px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .testimonial {
+                width: 50%;
+                .block-content {
+                    margin: 10px;
+                    border: 1px solid @color-eee;
+                }                
+                .block-content .text-wrapper p {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .button-wrapper {
+                width: 100%;
+                display: flex;
+                margin-top: 13px;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        .block-container .testimonial .block-content .text-wrapper {
+            padding: 32px 40px 10px;
+            font-size: 13px;
+            line-height: 20px;
+            color: @color-333;
+            font-weight: 400;
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .lifestyle-blog {
+        margin-top: 55px;
+        .block-title {
+            margin: 70px 0 -4px;
+        }
+        .block-container {
+            margin: 40px -10px;
+            display: flex;
+            flex-wrap: wrap;
+            .block-content {
+                width: 33.33%;
+                padding-bottom: 5px;
+            }
+            .blog-wrapper {
+                padding: 10px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .block-container .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 18px;
+                line-height: 24px;
+                color: @color-222;
+                font-weight: 400;
+                font-family: @font-family__lora-regular;
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 20px;
+                color: @color-333;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .outdoor-inspiration,
+    .lifestyle-blog,
+    .testimonials {
+        display: none;
+    }
+
+    .widget .block-title strong {
+        font-size: 22px;
+    }
+
+    .block-title strong {
+        font-size: 22px;
+    }
+
+    .lifestyle-blog-mobile {
+        display: flex;
+        flex-direction: column;
+        .block-container .block-content .blog-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+        .block-container .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 18px;
+                line-height: 24px;
+                color: @color-222;
+                font-weight: 400;
+                font-family: @font-family__lora-regular;
+                margin: 15px 0;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 20px;
+                color: @color-333;
+                font-weight: 400;
+            }
+
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .testimonials-mobile {
+        .block-container {
+            display: flex;
+            flex-direction: column;
+
+            .testimonial {
+                width: 100%;
+                .block-content {
+                    margin-bottom: 10px;
+                    border: 1px solid @color-eee;
+                }                
+            }
+
+            .button-wrapper {
+                width: 100%;
+                display: flex;
+                margin-top: 8px;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        .block-container .testimonial .block-content .text-wrapper {
+            padding: 30px;
+            font-size: 13px;
+            line-height: 20px;
+            color: @color-333;
+            font-weight: 400;
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .outdoor-inspiration-mobile {
+        .block-title {
+            p {
+                margin-top: 30px;
+                font-size: 13px;
+                line-height: 20px;
+                color: @color-333;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .standard-button {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }    
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .block.widget .products-grid .product-item .product-item-inner,
+    .page-layout-1column .block.widget .products-grid .product-item .product-item-inner {
+        box-shadow: none;
+        margin: 0;
+    }
+}
