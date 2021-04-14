@@ -104,6 +104,15 @@
     .header-top {
         .lib-vendor-prefix-display(flex);
     }
+
+    .header-top,
+    .header-top-links {
+        letter-spacing: 0.01em;
+        span > a {
+            color: @color-white;
+            text-decoration: none;
+        }
+    }
     
     //mini cart 
     .minicart-wrapper {
@@ -356,26 +365,63 @@
     .header-top {
         width: 80%;
         &__left {
-            margin-right: 6%;
+            margin-right: 7.7%;
             &--mobile {
                 display: none;
             }
         }
 
         &__right {
+            span > a {
+                padding-right: 2px;
+                &:not(:first-child) {
+                    padding-left: 3px;
+                }
+            }
             &--mobile {
                 display: none;
             }
         }
     }
 
+    .header-top-links {
+        span > a {
+            margin-left: 14px;
+        }
+    }
+
+    .header.content {
+        padding-top: 23px;
+    }
+
+    .block.block-search {
+        margin-top: 4px;
+        margin-right: 11px;
+        width: 395px;
+        input {
+            &::placeholder {
+                font-size: 13px;
+                letter-spacing: 0.015em;
+            }
+        }
+        
+        .action.search {
+            &::before  {
+                line-height: 34px;
+            }
+        }
+    }
+
     .minicart-wrapper {
+        margin-top: 4px;
         a.action.showcart{
             &::before {
                 color: @color-red-cart;
             }
 
             span.counter.qty {
+                padding-left: 0;
+                padding-right: 0;
                 overflow: visible;
                 background-color: transparent;
                 color: @color-red-cart;
@@ -392,6 +438,10 @@
         }
     }
     //navigation
+    .sections.nav-sections {
+        margin-top: 2px;
+    } 
+
     div.section-item-content.nav-sections-item-content {
         border-bottom: 1px solid @color-gray-middle1;
         nav.navigation {
@@ -587,7 +637,7 @@
     
     .header-top {
         width: 100%;
-
+        
         &__left {
             &--desktop {
                 display: none;
