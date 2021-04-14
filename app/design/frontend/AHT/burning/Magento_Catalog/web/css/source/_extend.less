@@ -6,11 +6,9 @@
         .list-banner {
             .lib-css(position, absolute);
             .lib-css(color, @color-white);
-            .lib-css(bottom, 10%);
             .lib-css(left, 3.3%);
             h1 {
                 .lib-css(font-family, @font-family__sunvalley);
-                .lib-css(font-size, 72px);
                 .lib-css(margin-bottom, 20px);
             }
             p {
@@ -28,4 +26,41 @@
     }
 
     
+}
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__xs) {
+    .category-banner {
+        .list-banner {
+            .lib-css(bottom, 3%);
+            h1 {
+                .lib-css(font-size, 30px);
+            }
+            
+            p {
+                .lib-css(font-size, 10px);
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .category-banner {
+        .list-banner {
+            .lib-css(bottom, 10%);
+            h1 {
+                .lib-css(font-size, 45px);
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .category-banner {
+        .list-banner {
+            .lib-css(bottom, 10%);
+            h1 {
+                .lib-css(font-size, 72px);
+            }
+        }
+    }
 }

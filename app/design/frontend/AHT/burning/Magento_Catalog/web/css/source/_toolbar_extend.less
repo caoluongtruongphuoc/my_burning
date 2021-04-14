@@ -56,14 +56,60 @@
     
     .toolbar-products .pages .action {
         background: none;
+        box-shadow: none;
+        border: none;
     }
 }
 
 
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
     .toolbar-amount {
-        text-align: left;
+        display: none;
     }
+
+    .block.filter .filter-title {
+        margin: 0;
+        &::before {
+            display: none;
+        }
+        strong {
+            box-shadow: none;
+            border-radius: 0;
+            border: 1px solid @color-ddd;
+            transform: none;
+            left: 0;
+            width: 70px;
+            height: 43px;
+            max-height: 44px;
+            font-size: 13px;
+            color: #333333;
+            font-weight: 500;
+            font-family: @font-family__roboto-medium;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .block.filter.active .filter-title {
+        margin: 0;
+        &::before {
+            display: none;
+        }
+        strong {
+            box-shadow: none;
+            border-radius: 0;
+            border: none;
+            transform: none;
+            left: auto;
+            width: 70px;
+            max-height: 44px;
+            font-size: 13px;
+            color: transparent;
+            
+        }
+    }
+    
 }
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
