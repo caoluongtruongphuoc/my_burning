@@ -185,12 +185,15 @@
                 text-align: center;
 
                 &--box {
-                    margin: 0 auto;
-                    font-size: 15px;
+                    margin: 4px auto 0 auto;
+                    a.action.primary {
+                        text-transform: capitalize;
+                        font-size: 15px;
+                    }
                 }
 
                 &--text {
-                    margin: 10px auto 20px auto;
+                    margin: 14px auto 20px auto;
                     width: 210px;
                 }
 
@@ -221,6 +224,10 @@
                 &-big {
                     font-family: @font-family-name__lora-bold;
                 }
+                &-small {
+                    letter-spacing: 0.07px;
+                }
+
                 a {
                     text-decoration: underline;
                     color: @color-white;
@@ -250,7 +257,9 @@
         }
 
         &__content-custom {
-
+            .row {
+                margin-top: -3px;
+            }
             .all-links,
             .all-links-desktop {
                 .links-item {
@@ -260,11 +269,10 @@
                     }
 
                     .list-collapse {
-                        padding: 5px 0;
+                        padding: 10px 0 5px 0;
                     }
 
                     &__list {
-                        padding: 5px 0;
                         font-size: 13px;
                         line-height: 22px;
                         font-family: @font-family__roboto-regular;
@@ -288,15 +296,17 @@
                     max-width: 260px;
                     font-size: 13px;
                     line-height: 18px;
-                    padding: 19px 0;
+                    padding: 13px 0;
+                    letter-spacing: 0.05px;
                     font-family: @font-family__roboto-regular;
                 }
     
                 .content {
+                    margin-top: 4px;
                     padding-bottom: 30px;
                     input[type="email"] {
                         height: 44px;
-                        padding-left: 5px;
+                        padding-left: 15px;
                         margin-right: 0;
                     }
     
@@ -533,13 +543,14 @@
                 &-big {
                     font-size: 38px;
                     line-height: 24px;
+                    margin-bottom: 24px;
                 }
 
                 &-small {
                     font-size: 18px;
                     line-height: 26px;
                     width: 590px;
-                    margin: 15px auto 0 auto;
+                    margin: 20px auto 0 auto;
                 }
             }
         }
@@ -560,7 +571,7 @@
 
         &__content-custom {
             padding-top: 60px;
-            padding-bottom: 0;
+            padding-bottom: 2px;
             .row {
                 padding-left: 0;
                 padding-right: 0;
