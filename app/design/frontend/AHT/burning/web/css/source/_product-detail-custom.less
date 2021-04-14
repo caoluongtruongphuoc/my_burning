@@ -80,51 +80,48 @@
             }
 
             padding-top: 0;
-            .product-options-bottom {
-                
-                .box-tocart {
-                    .fieldset {
-                        margin-top: -5px;
-                        margin-bottom: -10px;
-                        height: 40px;
-                        .lib-vendor-prefix-display(flex);
-                        width: 100%;
+            .box-tocart {
+                .fieldset {
+                    margin-top: -5px;
+                    margin-bottom: -10px;
+                    height: 40px;
+                    .lib-vendor-prefix-display(flex);
+                    width: 100%;
 
-                        .field.qty {
-                            .control {
-                                margin-right: 20px;
-                                .lib-vendor-prefix-display(flex);
-                                .qty-minus,
-                                .qty-plus {
-                                    width: 40px;
-                                    height: 40px;
-                                    background-color: @color-white;
-                                    color: @color-gray60;
-                                    font-size: 13px;
-                                    text-align: center;
-                                    border: 1px solid @color-ddd;
-                                }
-                                .qty-minus {
-                                    border-right: none;
-                                }
-                                .qty-plus {
-                                    border-left: none;
-                                }
-                                .input-text.qty {
-                                    width: 40px;
-                                    height: 40px;
-                                    z-index: 2;
-                                }
+                    .field.qty {
+                        .control {
+                            margin-right: 20px;
+                            .lib-vendor-prefix-display(flex);
+                            .qty-minus,
+                            .qty-plus {
+                                width: 40px;
+                                height: 40px;
+                                background-color: @color-white;
+                                color: @color-gray60;
+                                font-size: 13px;
+                                text-align: center;
+                                border: 1px solid @color-ddd;
+                            }
+                            .qty-minus {
+                                border-right: none;
+                            }
+                            .qty-plus {
+                                border-left: none;
+                            }
+                            .input-text.qty {
+                                width: 40px;
+                                height: 40px;
+                                z-index: 2;
+                            }
 
-                                .input-text.qty + .mage-error {
-                                    .lib-visually-hidden();
-                                }
+                            .input-text.qty + .mage-error {
+                                .lib-visually-hidden();
                             }
                         }
+                    }
 
-                        .actions {
-                            width: 100%;
-                        }
+                    .actions {
+                        width: 100%;
                     }
                 }
             }
