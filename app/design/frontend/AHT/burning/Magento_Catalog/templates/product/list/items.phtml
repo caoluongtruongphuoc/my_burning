@@ -326,7 +326,7 @@ $_item = null;
         'slick'
     ], function ($) {
         $(document).ready(function () {
-            $("#slick-product-detail").slick({
+            $("#slick-product-detail").not('.slick-initialized').slick({
                 //autoplay: true,
                 rows: 1,
                 slidesToShow: 4,
