@@ -10,7 +10,7 @@
             letter-spacing: 1px;
             line-height: 20px;
             font-family: @font-family-name__roboto-bold;
-            padding: 16px 16px 14px 16px;
+            padding: 12px 14px 11px 16px;
             position: absolute;
             top: 0;
             left: 0;
@@ -220,7 +220,7 @@
                             font-size: 20px;
                             line-height: 36px;
                             font-family: @font-family-name__lora-regular;
-                            margin-bottom: 19px;
+                            margin-bottom: 5px;
                         }
 
                         &--link {
@@ -265,11 +265,43 @@
             // right
             div.product-info-main {
                 width: 29.03%;
-                padding: 30px;
+                padding: 27px 30px 17px 28px;
                 border: 1px solid @color-ddd;
+
+                .page-title-wrapper.product {
+                    .page-title {
+                        letter-spacing: -0.5px;
+                    }
+                }
+                
+                .product-info-price {
+                    padding-top: 2px;
+                    padding-bottom: 4px;
+                    margin-bottom: 21px;
+                }
+
+                .product-add-form {
+                    .product-options-wrapper {
+                        .fieldset > .field {
+                            margin-bottom: 18px;
+                            .label {
+                                margin-bottom: 6px;
+                            }
+                        }   
+                    }
+
+                    .box-tocart {
+                        margin-top: 26px;
+                    }
+                }
+
+                
 
                 // short des
                 div.product.attribute.overview {
+                    padding-top: 1px;
+                    letter-spacing: 0.07px;
+                    line-height: 20px;
                     .value {
                         .short-des {
                             a {
@@ -288,36 +320,50 @@
             // left
             .product.media {
                 width: 64.52%;  
-                margin-bottom: 0;          
+                margin-bottom: 0;    
+
+                .fotorama__nav__frame.fotorama__nav__frame--thumb {
+                    margin-right: 7px;
+                }     
             }
 
             .product.info.detailed {
                 margin-bottom: 0;
-                width: 100%;
+                width: 64.52%; 
                 div.product.data.items {
                     .lib-data-tabs(
                         @_tab-control-font-family: @font-family-name__roboto-bold,
                         @_tab-control-font-size: 13px,  
-                        @_tab-control-height: 48px,
-                        @_tab-control-line-height: 48px,
-                        @_tab-control-padding-left: 25px,
-                        @_tab-control-padding-right: 25px,
+                        @_tab-control-height: 46px,
+                        @_tab-control-line-height: 46px,
+                        @_tab-control-padding-left: 24px,
+                        @_tab-control-padding-right: 24px,
                         @_tab-control-color-visited: @color-gray60,
-                        @_tab-content-margin-top: 50.4px,
+                        @_tab-content-margin-top: 49px,
                         @_tab-content-padding-left: 30px,
-                        @_tab-content-padding-top: 27px,
+                        @_tab-content-padding-top: 25px,
                         @_tab-content-padding-right: 33px,
                         @_tab-content-padding-bottom: 29px
                     );
 
+                    .data.item.title {
+                        letter-spacing: 0.01px
+                    }
                     .data.item.content {
+                        letter-spacing: 0.08px;
+                        .text-big {
+                            letter-spacing: 0.2px;
+                            padding-bottom: 10px;
+                        }
+
                         .block-list {
+                            margin-top: 26px;
                             .block-item {
                                 .lib-vendor-prefix-display(flex);
 
                                 &__text {
                                     width: 314px;
-                                    margin-right: 18px;
+                                    margin-right: 14px;
                                     margin-top: 34px;
                                     margin-left: auto;
                                     text-align: center;

@@ -38,10 +38,6 @@
         <referenceBlock name="product.info.description">
             <block class="Magento\Framework\View\Element\Template" name="block.list" template="Magento_Catalog::product/view/tab_care.phtml" after="-"/>
         </referenceBlock>
-
-        <move element="product.info.details" destination="product.info.media" after="-" />
-        
-        <move element="content.aside" destination="main.content" after="-"/>
     
     </body>
 </page>
