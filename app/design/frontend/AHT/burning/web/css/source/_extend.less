@@ -100,6 +100,10 @@
         padding-left: 20px;
     }
 
+    .breadcrumbs {
+        margin: 15px 0 15px;
+    }
+
     //header top
     .header-top {
         .lib-vendor-prefix-display(flex);
@@ -259,6 +263,7 @@
                         font-family: @font-family__roboto-regular;
                         a {
                             color: @color-black;
+                            text-decoration: none;
                         }
                     }
                 }
@@ -352,6 +357,10 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .panel.header {
         padding: 0;
+    }
+
+    .nav-sections {
+        margin-bottom: 0;
     }
 
     .header-top-links {
