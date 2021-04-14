@@ -185,12 +185,15 @@
                 text-align: center;
 
                 &--box {
-                    margin: 0 auto;
-                    font-size: 15px;
+                    margin: 4px auto 0 auto;
+                    a.action.primary {
+                        text-transform: capitalize;
+                        font-size: 15px;
+                    }
                 }
 
                 &--text {
-                    margin: 10px auto 20px auto;
+                    margin: 14px auto 20px auto;
                     width: 210px;
                 }
 
@@ -221,6 +224,10 @@
                 &-big {
                     font-family: @font-family-name__lora-bold;
                 }
+                &-small {
+                    letter-spacing: 0.07px;
+                }
+
                 a {
                     text-decoration: underline;
                     color: @color-white;
@@ -533,13 +540,14 @@
                 &-big {
                     font-size: 38px;
                     line-height: 24px;
+                    margin-bottom: 24px;
                 }
 
                 &-small {
                     font-size: 18px;
                     line-height: 26px;
                     width: 590px;
-                    margin: 15px auto 0 auto;
+                    margin: 20px auto 0 auto;
                 }
             }
         }
