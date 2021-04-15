@@ -26,9 +26,9 @@ $mainImageData = $mainImage ?
     $mainImage->getData('medium_image_url') :
     $helper->getDefaultPlaceholderUrl('image');
 
-$product = $block->getProduct();
-$saleOrPre = $product->getSale_or_preorder();    
-if ($saleOrPre==5440) {
+$_product = $block->getProduct();
+$saleOrPre = $_product->getResource()->getAttribute('sale_or_preorder')->getFrontend()->getValue($_product); 
+if ($saleOrPre=='Pre Order') {
 ?>
 <div class="sale-preorder">
     Pre Order
