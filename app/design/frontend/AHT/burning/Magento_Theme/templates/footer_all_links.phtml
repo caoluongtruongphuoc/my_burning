@@ -14,6 +14,9 @@ require(['jquery','accordion'], function ($) {
         "icons": {"header": "las la-plus", "activeHeader": "las la-plus icon-rotate"}
     });
 
+    $('span.las.la-plus').click(function () {
+        $(this).siblings('[data-role="trigger"]').click();
+    });
     // // toggle click icon 
     // $("#footer-all-links > .links-item > .links-item__text-big > i").click(function () {
     //     $("#footer-all-links > .links-item > .links-item__text-big > i").toggleClass("icon-rotate");
