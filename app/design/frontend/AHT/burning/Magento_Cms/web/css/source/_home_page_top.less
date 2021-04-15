@@ -15,7 +15,7 @@
             cursor: pointer;
             font-size: 13px;
             letter-spacing: 1px;
-            line-height: 14px;
+            //line-height: 14px;
             font-weight: 500;
 
             &::after {
@@ -103,7 +103,7 @@
                 margin-left: 34px;
             }
             .banner-button {
-                margin-left: 36px;
+                margin-left: 32px;
             }
         }
     }
@@ -112,6 +112,12 @@
     .banner-image-video-desktop {
         .banner-wrapper .banner-content h2 {
             font-size: 35px;
+        }
+    }
+
+    .home-line {
+        a {
+            line-height: 14px;
         }
     }
     
@@ -132,7 +138,7 @@
     .banner__between_desktop,
     .banner-image-video-desktop {
         display: flex;
-        margin: 0 -10px 10px -10px;
+        margin: -2px -10px 8px -10px;
         .banner-wrapper {
             position: relative;
             padding: 10px;
@@ -256,6 +262,10 @@
         display: none;
     }
 
+    .page-header{
+         margin-bottom: 12px;
+    }
+
     .column {
         margin: 0 -5px;
     }
@@ -326,6 +336,12 @@
         }
     }
 
+    .home-line {
+        a {
+            line-height: 40px;
+        }
+    }
+
     .banner__between_mobile {
         margin-top: 5px;
         display: flex;
@@ -342,7 +358,7 @@
 
             .banner-content {
                 position: absolute;
-                top: 40%;
+                top: 41%;
                 transform: translate(0, -50%);
                 width: 100%;
                 display: flex;
@@ -366,12 +382,16 @@
                         @_button-color-hover: @color-2d,
                         @_button-background-hover: @color-white,
                         @_button-border-hover: 2px solid @color-2d,
-                        @_button-padding: 7px 13px,
+                        @_button-padding: 8px 11px,
                         @_button-margin: 0,
         );
                 }
             }
         }
+    }
+
+    .home-line {
+        margin-top: -2px;
     }
 
     .banner-end-mobile .banner-wrapper {

@@ -1,7 +1,5 @@
 & when (@media-common = true) {
-    .slick-slide {
-        padding: 10px;
-    }
+    
 
     .block-title {
         text-align: center;
@@ -99,12 +97,16 @@
         display: none;
     }
 
+    .slick-slide {
+        padding: 10px;
+    }
+
     .block-title strong{
         font-size: 32px;
     }
 
     .widget .block-title {
-        margin: 52px 0 20px;
+        margin: 52px 0 32px;
         strong {
             font-size: 32px;
         }
@@ -126,14 +128,11 @@
 
     .slick-slide{
         margin-top: 22px;
-        .product-item .product-item-details {
-            margin-top: -18px;
-        }
     }
     
 
     .outdoor-inspiration {
-        margin-top: 40px;
+        margin-top: 37px;
         .inspiration-images {
             margin: -30px -10px 0 -10px;
         }
@@ -263,6 +262,21 @@
         font-size: 22px;
     }
 
+    .list-item {
+        margin-top: 32px;
+    }
+    .slick-slide {
+        margin-top: -12px;
+        padding: 0;
+        .product-item {
+            margin-top: -10px;
+        }
+    }
+
+    .list-2 {
+        margin-top: 23px;
+    }
+
     .lifestyle-blog-mobile {
         display: flex;
         flex-direction: column;
@@ -280,7 +294,8 @@
                 color: @color-222;
                 font-weight: 400;
                 font-family: @font-family__lora-regular;
-                margin: 15px 0;
+                margin-top: 15px;
+                margin-bottom: 10px;
             }
 
             p {
@@ -288,6 +303,7 @@
                 line-height: 20px;
                 color: @color-333;
                 font-weight: 400;
+                margin-bottom: 21px;
             }
 
             a {
@@ -297,6 +313,7 @@
     }
 
     .testimonials-mobile {
+        margin-top: -8px;
         .block-container {
             display: flex;
             flex-direction: column;
@@ -336,6 +353,7 @@
     }
 
     .outdoor-inspiration-mobile {
+        margin-top: -10px;
         .block-title {
             p {
                 margin-top: 30px;
@@ -351,11 +369,22 @@
             text-align: center;
         }
 
+        .inspiration-images {
+            margin: 0 -5px;
+        }
+
         .standard-button {
             text-decoration: none;
             text-transform: uppercase;
             text-align: center;
             width: 100%;
+            margin-top: 35px;
+        }
+        .slick-slide {
+            padding: 5px;
+            img {
+                padding-bottom: 5px;
+            }
         }
     }    
 }
